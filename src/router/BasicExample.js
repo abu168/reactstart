@@ -2,12 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link, Prompt } from "react-router-dom";
 
 const BasicExample = () => {
-  const getConfirmation = (message, callback) => {
-    const allowTransition = window.confirm(message);
-    callback(allowTransition);
-  };
   return (
-    <Router forceRefresh={false} getUserConfirmation={getConfirmation}>
+    <Router>
       <div>
         <ul>
           <li>
@@ -20,7 +16,6 @@ const BasicExample = () => {
             <Link to="/topics">Topics</Link>
           </li>
         </ul>
-        <Prompt message="are you sure want to leave me."/>
         <hr />
 
         <Route exact path="/" component={Home} />
