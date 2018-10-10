@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link, Prompt } from "react-router-dom";
 
 const BasicExample = () => {
   return (
-    <Router>
+    <Router children={Home}>
       <div>
         <ul>
           <li>
